@@ -196,11 +196,12 @@ Google search hint
 """
 13.
 Set
-zile_sapt = {'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+zile_sapt = {'luni', 'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
 weekend = {'sâmbăta', 'duminică'}
 Adaugă în zilele_sapt ‘luni’
 Afișează zile_sapt
 """
+# # Valorile din set sunt unice!!!
 # zile_sapt = {'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
 # weekend = {'sâmbăta', 'duminică'}
 # zile_sapt.add('luni')
@@ -211,7 +212,18 @@ Afișează zile_sapt
 Weekend este un subset al zilelor din săptămânii.
 Weekend nu este un subset al zilelor din săptămânii.
 """
+# Varianta 1
+# zile_sapt = {'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+# weekend = {'sâmbăta', 'duminică'}
 # if weekend.intersection(zile_sapt) == weekend:
+#     print('Weekend este un subset al zilelor din săptămânii.')
+# else:
+#     print('Weekend nu este un subset al zilelor din săptămânii.')
+
+# Varianta 2
+# zile_sapt = {'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+# weekend = {'sâmbăta', 'duminică'}
+# if weekend.issubset(zile_sapt):
 #     print('Weekend este un subset al zilelor din săptămânii.')
 # else:
 #     print('Weekend nu este un subset al zilelor din săptămânii.')
@@ -219,10 +231,14 @@ Weekend nu este un subset al zilelor din săptămânii.
 """
 15. Afișează diferențele dintre aceste 2 seturi.
 """
+# zile_sapt = {'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+# weekend = {'sâmbăta', 'duminică'}
 # print(zile_sapt - weekend)
 # print(weekend - zile_sapt)
 
 """
 16. Afișează intersecția elementelor din aceste 2 seturi.
 """
+# zile_sapt = {'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+# weekend = {'sâmbăta', 'duminică'}
 # print(zile_sapt.intersection(weekend))

@@ -9,13 +9,13 @@ Modifică elementele din listă astfel încât să fie scrise cu majuscule, exce
   Printează lista.
 """
 # cars = ['Audi', 'Volvo', 'BMW', 'Mercedes', 'Aston Martin', 'Lăstun', 'Fiat', 'Trabant', 'Opel']
-# ca sa pot modifica lista, am nevoie de indecsii acesteia, asa ca for-ul meu va fi pe indecsi
-
+#             #ca sa pot modifica lista, am nevoie de indecsii acesteia, asa ca for-ul meu va fi pe indecsi
+#
 # for idx in range(len(cars)):
 #     print(f'{idx}: {cars[idx]}')
-
-# cars[0] = cars[0].upper()   # asa fac un element al listei sa devina scris cu masjuscule
-
+#
+#    # asa fac un element al listei sa devina scris cu masjuscule -  cars[0] = cars[0].upper()
+#
 # for idx in range(len(cars)):
 #     if idx == 0 or idx == len(cars) - 1:    # daca indexul este 0 sau len-1 (Adica daca suntem la primul SAU ultimul element
 #         continue    # sarim peste
@@ -59,9 +59,19 @@ Fă același lucru cu un for each.
 Fă același lucru cu un while.
 """
 # masini = ['Audi', 'Volvo', 'BMW', 'Mercedes', 'Aston Martin', 'Lăstun', 'Fiat', 'Trabant', 'Opel']
-# for marca in masini:
+# for marca in masini: #for-each, printeaza in functie de index
 #     print(f'Masina mea preferata este {marca}')
-# [print(f'Masina mea preferata este {marca}') for marca in masini]
+#
+# print('*' * 80)
+#
+# [print("Mașina mea preferată este", masina) for masina in masini]
+#
+# print('*' * 80)
+#
+# for marca in range(len(masini)): #simplu doar cu for
+#     print(f'Masina mea preferata este {masini[marca]}')
+#
+# print('*' * 80)
 # i = 0
 # while i < len(masini):
 #     print(f'Masina mea preferata este {masini[i]}')
@@ -149,8 +159,8 @@ Calculează și afișează suma numerelor (nu ai voie să folosești sum).
 Iterează prin ea.
 Afișază cel mai mare număr (nu ai voie să folosești max).
 """
-# numere = [5, 7, 3, 9, 3, 3, 1, 0, -4, 3]
-# maxi = 0
+# numere = [-5, -7, -3, -9, -3, -3, -1, -4, -3]
+# maxi = numere[0]
 # for i in numere:
 #     while i > maxi:
 #         maxi = i
@@ -163,11 +173,11 @@ Dacă numărul e pozitiv, înlocuieste-l cu valoarea lui negativă.
 Ex: dacă e 3, să devină -3
 Afișază noua listă.
 """
-# numere = [5, 7, 3, 9, 3, 3, 1, 0, -4, 3]
-# for i in range(len(numere)):
-#     if numere[i] > 0:
-#         numere[i] = -numere[i]
-# print(numere)
+numere = [5, 7, 3, 9, 3, 3, 1, 0, -4, 3]
+for i in range(len(numere)):
+    if numere[i] > 0:
+        numere[i] = -numere[i]
+print(numere)
 
 """
 11.
@@ -208,10 +218,13 @@ https://www.youtube.com/watch?v=lyZQPjUT5B4
 # numere = [5, 7, 3, 9, 3, 3, 1, 0, -4, 3]
 # for i in range(len(numere)):
 #     for j in range(0, len(numere)-i-1): #itereaza prin lista ramasa dupa fiecare pas
+#         print(len(numere)-i-1)
 #         if numere[j] > numere[j + 1]:
 #             numere[j], numere[j + 1] = numere[j + 1], numere[j]
 #             print(numere)
 # print(numere)
+
+#sau folosim numere.sort()
 
 """
 13. Ghicitoare de număr:
@@ -260,18 +273,30 @@ Ex:3
 # while numar <= 0:
 #     numar = int(input('Introduceti un numar pozitiv:'))
 #
-# for rand in range(1, numar+1):
-#     for caractere in range(rand):
-#         print(rand, end='')
+# for i in range(numar+1):
+#     for j in range(i):
+#         print(i, end='')
 #     print()
 
-#Varianta 2
+# #Varianta 2
 # numar = int(input('Introduceti un numar pozitiv:'))
 # while numar <= 0:
 #     numar = int(input('Introduceti un numar pozitiv:'))
 # for i in range(1, numar+1):
 #     print(str(i) * i) #sir format din i repetat de i ori
 
+# #Varinata 3
+# numar = int(input('Introduceti un numar pozitiv:'))
+# while numar <= 0:
+#      numar = int(input('Introduceti un numar pozitiv:'))
+# i = 1
+# while i <= numar:
+#     print()
+#     for j in range(i):
+#         j = i
+#         print(j, end='')
+#         j += 1
+#     i += 1
 """
 15.
 tastatura_telefon = [
@@ -284,3 +309,12 @@ Iterează prin listă 2d
 Printează ‘Cifra curentă este x’
 (hint: nested for - adică for în for)
 """
+# tastatura_telefon = [
+#   [1, 2, 3],
+#   [4, 5, 6],
+#   [7, 8, 9],
+#   [0]
+# ]
+# for row in tastatura_telefon:
+#     for digit in row:
+#         print(f'Cifra curentă este {digit}')
